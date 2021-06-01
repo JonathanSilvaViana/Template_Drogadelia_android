@@ -8,4 +8,16 @@
     android:orientation="vertical"
     tools:context=".OfertaActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_toolbar"
+        app:menu="@menu/menu"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+
+
+
 </LinearLayout>

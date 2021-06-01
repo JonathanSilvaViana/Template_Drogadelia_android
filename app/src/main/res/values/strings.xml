@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Drogadelia</string>
+    <string name="cart">Carrinho</string>
+    <string name="support">Chat</string>
+    <string name="category">Categoria</string>
+    <string name="account">Acessar</string>
 </resources>

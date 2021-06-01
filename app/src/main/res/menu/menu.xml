@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- "Mark Favorite", should appear as action button if possible -->
+    <item
+        android:id="@+id/carrinho"
+        android:icon="@drawable/carrinho_normal"
+        android:background="@color/teal_700"
+        android:color="@color/purple_500"
+        android:title="@string/cart"
+        />
+
+    <item
+        android:id="@+id/suporte"
+        android:icon="@drawable/carrinho_normal"
+        android:title="@string/support"
+        />
+
+    <item
+        android:id="@+id/categoria"
+        android:icon="@drawable/carrinho_normal"
+        android:title="@string/category"
+        />
+
+</menu>
