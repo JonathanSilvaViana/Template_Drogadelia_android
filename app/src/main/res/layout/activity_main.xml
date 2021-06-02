@@ -13,13 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/logo"
-        tools:ignore="VectorDrawableCompat"
         android:layout_marginLeft="25dp"
+        android:layout_marginEnd="25dp"
         android:layout_marginRight="25dp"
-        />
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/logo_smaller"
+        tools:ignore="VectorDrawableCompat"
+        tools:srcCompat="@drawable/logo_smaller" />
 
 
 </RelativeLayout>

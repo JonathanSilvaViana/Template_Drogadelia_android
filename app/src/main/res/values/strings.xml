@@ -4,4 +4,7 @@
     <string name="support">Chat</string>
     <string name="category">Categoria</string>
     <string name="account">Acessar</string>
+    <string name="you_have">Você têm</string>
+    <string name="waiting_for_buyer">Esperando por você</string>
+    <string name="itens">items</string>
 </resources>
