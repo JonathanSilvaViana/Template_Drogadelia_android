@@ -29,7 +29,7 @@ public class OfertaActivity extends AppCompatActivity {
 
     Context context;
 
-    ImageButton carrinho_bt;
+    ImageButton carrinho_bt, updade_bt;
 
     final static int transicao = 2600;
     final static int transicaoII = 5200;
@@ -51,7 +51,6 @@ public class OfertaActivity extends AppCompatActivity {
                 startActivity(carrinhodecompras);
             }
         });
-
 
         //executa a transição das imagens
 

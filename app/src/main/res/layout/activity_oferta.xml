@@ -12,6 +12,8 @@
 
     <include layout="@layout/sliders"/>
 
+
+
     <ScrollView android:layout_marginTop="230dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -23,6 +25,75 @@
             android:layout_height="fill_parent"
             android:orientation="vertical" >
 
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal"
+                >
+
+                <ImageButton
+                    android:id="@+id/voltar_slide"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="150dp"
+                    android:background="@color/black"
+                    app:srcCompat="@drawable/voltar"
+                    />
+
+                <ImageButton
+                    android:id="@+id/avancar_slide"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/black"
+                    app:srcCompat="@drawable/avancar"
+                    />
+
+            </LinearLayout>
+
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:isScrollContainer="false"
+                android:orientation="horizontal">
+
+            <!--
+
+            <Button
+                android:id="@+id/button00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/button01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/button02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/update"
+                />
+
+                -->
+
+        </RadioGroup>
+
+
+
 
 
     <Button
@@ -30,6 +101,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Button" />
+
+
 
             
 
