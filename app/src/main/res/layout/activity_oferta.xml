@@ -12,8 +12,6 @@
 
     <include layout="@layout/sliders"/>
 
-
-
     <ScrollView android:layout_marginTop="230dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -33,15 +31,49 @@
                 android:gravity="center_horizontal"
                 >
 
+                <!--cada botão de direção traz consigo cores gemêas, que são alteradas para uma cor padrão na classe-->
+
+                <!--voltar-->
+
                 <ImageButton
                     android:id="@+id/voltar_slide"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="150dp"
+                    android:visibility="visible"
                     android:background="@color/black"
                     app:srcCompat="@drawable/voltar"
                     />
+
+                <ImageButton
+                    android:id="@+id/voltar_slide_dois"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    android:layout_marginEnd="150dp"
+                    android:background="@color/crimson"
+                    app:srcCompat="@drawable/voltar"
+                    />
+
+                <ImageButton
+                    android:id="@+id/voltar_slide_um"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    android:layout_marginEnd="150dp"
+                    android:background="@color/teal_700"
+                    app:srcCompat="@drawable/voltar"
+                    />
+
+                <!--play e pause-->
+
+
+
+
+                <!-- avançar-->
 
                 <ImageButton
                     android:id="@+id/avancar_slide"
@@ -49,6 +81,26 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:background="@color/black"
+                    app:srcCompat="@drawable/avancar"
+                    />
+
+                <ImageButton
+                    android:id="@+id/avancar_slide_dois"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/teal_700"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/avancar"
+                    />
+
+                <ImageButton
+                    android:id="@+id/avancar_slide_tres"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/crimson"
+                    android:visibility="gone"
                     app:srcCompat="@drawable/avancar"
                     />
 
@@ -63,19 +115,6 @@
                 android:orientation="horizontal">
 
             <!--
-
-            <Button
-                android:id="@+id/button00"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1" />
-
-            <Button
-                android:id="@+id/button01"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2" />
-
             <Button
                 android:id="@+id/button02"
                 android:layout_width="wrap_content"
@@ -87,20 +126,17 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/update"
                 />
-
                 -->
 
         </RadioGroup>
 
-
-
-
-
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bt_update_app"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:text="@string/update" />
 
 
 
