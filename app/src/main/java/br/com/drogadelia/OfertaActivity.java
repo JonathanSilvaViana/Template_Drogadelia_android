@@ -142,6 +142,15 @@ public class OfertaActivity extends AppCompatActivity {
             }
         });
 
+        bt_update_app = (Button)findViewById(R.id.bt_update_app);
+
+        bt_update_app.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                atualizar();
+            }
+        });
+
     }
 
     public void autoslide()
@@ -265,5 +274,11 @@ public class OfertaActivity extends AppCompatActivity {
         autoslide();
     }
 
+    public void atualizar()
+    {
+        recreate();
+        //finish();
+        //startActivity(getIntent());
+    }
 
 }
