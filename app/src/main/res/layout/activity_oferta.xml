@@ -153,9 +153,11 @@
     <Button
         android:id="@+id/bt_update_app"
         android:layout_width="match_parent"
+        android:background="@drawable/background_bts"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
         android:text="@string/update" />
 
 

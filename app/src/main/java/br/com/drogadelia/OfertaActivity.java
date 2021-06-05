@@ -164,7 +164,7 @@ public class OfertaActivity extends AppCompatActivity {
         //encontra o layout da lista de ofertas
         lista_ofertas = (RecyclerView)findViewById(R.id.recycler_ofertas);
 
-
+        //criar aqui o web service
 
     }
 
