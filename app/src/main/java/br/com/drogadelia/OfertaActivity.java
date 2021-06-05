@@ -35,6 +35,7 @@ public class OfertaActivity extends AppCompatActivity {
     Button bt_update_app;
     String imgA, imgB, imgC;
     int pegarID_img;
+    Intent carrinhodecompras, bannerLegal;
 
     final static int transicao = 2600;
     final static int transicaoII = 5200;
@@ -52,7 +53,7 @@ public class OfertaActivity extends AppCompatActivity {
         carrinho_bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent carrinhodecompras = new Intent(OfertaActivity.this, CarrinhoActivity.class);
+                carrinhodecompras = new Intent(OfertaActivity.this, CarrinhoActivity.class);
                 startActivity(carrinhodecompras);
             }
         });
@@ -65,6 +66,13 @@ public class OfertaActivity extends AppCompatActivity {
         imgC = "banner3";
 
         imgV = (ImageView)findViewById(R.id.imageSlider);
+
+        /*imgV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                vai_bannerLegal();
+            }
+        });*/
 
         //inicia o slide
         autoslide();
@@ -272,6 +280,12 @@ public class OfertaActivity extends AppCompatActivity {
         bt_play.setVisibility(View.GONE);
         bt_pause.setVisibility(View.VISIBLE);
         autoslide();
+    }
+
+    public void vai_bannerLegal()
+    {
+        bannerLegal = new Intent(this, BannerLegalActivity.class);
+        startActivity(bannerLegal);
     }
 
     public void atualizar()
