@@ -31,7 +31,7 @@ public class OfertaActivity extends AppCompatActivity {
 
     Context context;
 
-    ImageButton carrinho_bt, voltar_slide, avancar_slide, voltar_slide_dois, voltar_slide_um, avancar_slide_dois, avancar_slide_tres;
+    ImageButton carrinho_bt, voltar_slide, avancar_slide, voltar_slide_dois, voltar_slide_um, avancar_slide_dois, avancar_slide_tres, bt_pause, bt_play;
     Button bt_update_app;
     String imgA, imgB, imgC;
     int pegarID_img;
@@ -67,7 +67,7 @@ public class OfertaActivity extends AppCompatActivity {
         imgV = (ImageView)findViewById(R.id.imageSlider);
 
         //inicia o slide
-        //autoslide();
+        autoslide();
 
         //encontra o botão para retroceder o slide
         voltar_slide = (ImageButton)findViewById(R.id.voltar_slide);
@@ -123,6 +123,25 @@ public class OfertaActivity extends AppCompatActivity {
             }
         });
 
+
+        //encontra os botões de play e pause
+        bt_pause = (ImageButton) findViewById(R.id.bt_pause);
+        bt_play = (ImageButton) findViewById(R.id.bt_play);
+
+        bt_pause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pausar();
+            }
+        });
+
+        bt_play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                play();
+            }
+        });
+
     }
 
     public void autoslide()
@@ -147,8 +166,11 @@ public class OfertaActivity extends AppCompatActivity {
             @Override
             public void run() {
                 imgV.setImageResource(R.drawable.banner1);
+                bt_pause.setVisibility(View.GONE);
+                bt_play.setVisibility(View.VISIBLE);
             }
         }, transicaoIII);
+
     }
 
     //nesses metodos pode ser necessário deixar os demais botões ocultos
@@ -220,6 +242,19 @@ public class OfertaActivity extends AppCompatActivity {
         avancar_slide_tres.setBackgroundColor(getResources().getColor(R.color.black));
         voltar_slide_dois.setBackgroundColor(getResources().getColor(R.color.black));
         imgV.setImageResource(R.drawable.banner1);
+    }
+
+    public void pausar()
+    {
+        bt_pause.setVisibility(View.GONE);
+        bt_play.setVisibility(View.VISIBLE);
+    }
+
+    public void play()
+    {
+        bt_play.setVisibility(View.GONE);
+        bt_pause.setVisibility(View.VISIBLE);
+        autoslide();
     }
 
 

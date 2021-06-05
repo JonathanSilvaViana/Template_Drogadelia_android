@@ -40,7 +40,7 @@
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:layout_marginEnd="150dp"
+                    android:layout_marginEnd="25dp"
                     android:visibility="visible"
                     android:background="@color/black"
                     app:srcCompat="@drawable/voltar"
@@ -52,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:visibility="gone"
-                    android:layout_marginEnd="150dp"
+                    android:layout_marginEnd="25dp"
                     android:background="@color/crimson"
                     app:srcCompat="@drawable/voltar"
                     />
@@ -63,14 +63,34 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:visibility="gone"
-                    android:layout_marginEnd="150dp"
+                    android:layout_marginEnd="25dp"
                     android:background="@color/teal_700"
                     app:srcCompat="@drawable/voltar"
                     />
 
                 <!--play e pause-->
 
+                <ImageButton
+                    android:id="@+id/bt_pause"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="25dp"
+                    android:visibility="visible"
+                    android:background="@color/black"
+                    app:srcCompat="@drawable/pause"
+                    />
 
+                <ImageButton
+                    android:id="@+id/bt_play"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="25dp"
+                    android:visibility="gone"
+                    android:background="@color/black"
+                    app:srcCompat="@drawable/play"
+                    />
 
 
                 <!-- avançar-->
