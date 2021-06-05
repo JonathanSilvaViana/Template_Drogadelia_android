@@ -146,11 +146,14 @@ public class OfertaActivity extends AppCompatActivity {
 
     public void autoslide()
     {
+
+        //avisa quando o slide inicia
+        Toast.makeText(getApplicationContext(), R.string.initslide, Toast.LENGTH_SHORT).show();
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 imgV.setImageResource(R.drawable.banner2);
-
             }
         }, transicao);
 
@@ -168,8 +171,12 @@ public class OfertaActivity extends AppCompatActivity {
                 imgV.setImageResource(R.drawable.banner1);
                 bt_pause.setVisibility(View.GONE);
                 bt_play.setVisibility(View.VISIBLE);
+                //avisa quando o slide termina
+                Toast.makeText(getApplicationContext(), R.string.endslide, Toast.LENGTH_SHORT).show();
             }
-        }, transicaoIII);
+        }, transicaoIII );
+
+
 
     }
 
@@ -248,6 +255,7 @@ public class OfertaActivity extends AppCompatActivity {
     {
         bt_pause.setVisibility(View.GONE);
         bt_play.setVisibility(View.VISIBLE);
+        onStop();
     }
 
     public void play()

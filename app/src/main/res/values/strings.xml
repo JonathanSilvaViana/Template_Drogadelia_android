@@ -8,4 +8,6 @@
     <string name="waiting_for_buyer">Esperando por você</string>
     <string name="itens">items</string>
     <string name="update">Atualizar ofertas</string>
+    <string name="initslide">Slide iniciado</string>
+    <string name="endslide">Slide encerrado</string>
 </resources>
