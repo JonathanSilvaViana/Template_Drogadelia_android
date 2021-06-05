@@ -2,6 +2,7 @@ package br.com.drogadelia;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
@@ -36,6 +37,7 @@ public class OfertaActivity extends AppCompatActivity {
     String imgA, imgB, imgC;
     int pegarID_img;
     Intent carrinhodecompras, bannerLegal;
+    RecyclerView lista_ofertas;
 
     final static int transicao = 2600;
     final static int transicaoII = 5200;
@@ -158,6 +160,11 @@ public class OfertaActivity extends AppCompatActivity {
                 atualizar();
             }
         });
+
+        //encontra o layout da lista de ofertas
+        lista_ofertas = (RecyclerView)findViewById(R.id.recycler_ofertas);
+
+
 
     }
 

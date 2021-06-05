@@ -159,7 +159,9 @@
         android:text="@string/update" />
 
 
+            <!-- toda lista de ofertas se encontra nesse include abaixo -->
 
+            <include layout="@layout/lista_ofertas"/>
             
 
 
