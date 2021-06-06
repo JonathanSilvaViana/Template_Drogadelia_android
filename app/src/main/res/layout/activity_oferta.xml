@@ -123,7 +123,6 @@
                     android:visibility="gone"
                     app:srcCompat="@drawable/avancar"
                     />
-
             </LinearLayout>
 
 
@@ -164,8 +163,15 @@
             <!-- toda lista de ofertas se encontra nesse include abaixo -->
 
             <include layout="@layout/lista_ofertas"/>
-            
 
+                 <ImageView
+                    android:id="@+id/imageBanner"
+                    android:src="@drawable/banner1"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
 
 
         </LinearLayout>

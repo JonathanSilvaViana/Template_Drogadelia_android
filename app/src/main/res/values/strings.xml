@@ -11,4 +11,9 @@
     <string name="initslide">Slide iniciado</string>
     <string name="endslide">Slide encerrado</string>
     <string name="banner">Banner</string>
+    <string name="nicetext">Texto legal</string>
+    <string name="nicetitle">Título legal</string>
+    <string name="nicebuttom">Botão legal</string>
+    <string name="clickNiceButtom">Você clicou no botão legal!</string>
+    <string name="checkemail">Cheque seu e-mail</string>
 </resources>

@@ -42,7 +42,7 @@ public class OfertaActivity extends AppCompatActivity {
     final static int transicao = 2600;
     final static int transicaoII = 5200;
     final static int transicaoIII = 10400;
-    ImageView imgV;
+    ImageView imgV, imageBanner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +84,9 @@ public class OfertaActivity extends AppCompatActivity {
         voltar_slide_dois = (ImageButton)findViewById(R.id.voltar_slide_dois);
         voltar_slide_um = (ImageButton)findViewById(R.id.voltar_slide_um);
 
+        //define a cor do controle de voltar primário
+        voltar_slide.setBackground(getResources().getDrawable(R.drawable.background_bts));
+
         //faz voltar o slide anterior
         voltar_slide.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,6 +115,9 @@ public class OfertaActivity extends AppCompatActivity {
         avancar_slide_dois = (ImageButton)findViewById(R.id.avancar_slide_dois);
         avancar_slide_tres = (ImageButton)findViewById(R.id.avancar_slide_tres);
 
+        //define a cor do controle de slide primário
+        avancar_slide.setBackground(getResources().getDrawable(R.drawable.background_bts));
+
         avancar_slide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -137,6 +143,10 @@ public class OfertaActivity extends AppCompatActivity {
         //encontra os botões de play e pause
         bt_pause = (ImageButton) findViewById(R.id.bt_pause);
         bt_play = (ImageButton) findViewById(R.id.bt_play);
+
+        //define os estilos dos botões de play e pause
+        bt_play.setBackground(getResources().getDrawable(R.drawable.background_bts));
+        bt_pause.setBackground(getResources().getDrawable(R.drawable.background_bts));
 
         bt_pause.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -165,6 +175,18 @@ public class OfertaActivity extends AppCompatActivity {
         lista_ofertas = (RecyclerView)findViewById(R.id.recycler_ofertas);
 
         //criar aqui o web service
+
+        //encontra a imagem de banner
+
+        imageBanner = (ImageView) findViewById(R.id.imageBanner);
+
+        imageBanner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                vai_bannerLegal();
+            }
+        });
+
 
     }
 
@@ -212,8 +234,9 @@ public class OfertaActivity extends AppCompatActivity {
         avancar_slide.setVisibility(View.GONE);
         voltar_slide_dois.setVisibility(View.VISIBLE);
         avancar_slide_tres.setVisibility(View.VISIBLE);
-        voltar_slide_dois.setBackgroundColor(getResources().getColor(R.color.black));
-        avancar_slide_tres.setBackgroundColor(getResources().getColor(R.color.black));
+        //voltar_slide_dois.setBackgroundColor(getResources().getColor(R.color.black));
+        voltar_slide_dois.setBackground(getResources().getDrawable(R.drawable.background_bts));
+        avancar_slide_tres.setBackground(getResources().getDrawable(R.drawable.background_bts));
         imgV.setImageResource(R.drawable.banner3);
 
     }
@@ -224,8 +247,8 @@ public class OfertaActivity extends AppCompatActivity {
         avancar_slide_tres.setVisibility(View.GONE);
         voltar_slide_um.setVisibility(View.VISIBLE);
         avancar_slide_dois.setVisibility(View.VISIBLE);
-        voltar_slide_um.setBackgroundColor(getResources().getColor(R.color.black));
-        avancar_slide_dois.setBackgroundColor(getResources().getColor(R.color.black));
+        voltar_slide_um.setBackground(getResources().getDrawable(R.drawable.background_bts));
+        avancar_slide_dois.setBackground(getResources().getDrawable(R.drawable.background_bts));
         imgV.setImageResource(R.drawable.banner2);
     }
 
@@ -235,8 +258,8 @@ public class OfertaActivity extends AppCompatActivity {
         avancar_slide_dois.setVisibility(View.GONE);
         voltar_slide.setVisibility(View.VISIBLE);
         avancar_slide.setVisibility(View.VISIBLE);
-        voltar_slide.setBackgroundColor(getResources().getColor(R.color.black));
-        avancar_slide.setBackgroundColor(getResources().getColor(R.color.black));
+        voltar_slide.setBackground(getResources().getDrawable(R.drawable.background_bts));
+        avancar_slide.setBackground(getResources().getDrawable(R.drawable.background_bts));
         imgV.setImageResource(R.drawable.banner1);
     }
 
@@ -248,8 +271,8 @@ public class OfertaActivity extends AppCompatActivity {
         voltar_slide.setVisibility(View.GONE);
         avancar_slide_dois.setVisibility(View.VISIBLE);
         voltar_slide_um.setVisibility(View.VISIBLE);
-        avancar_slide_dois.setBackgroundColor(getResources().getColor(R.color.black));
-        voltar_slide_um.setBackgroundColor(getResources().getColor(R.color.black));
+        avancar_slide_dois.setBackground(getResources().getDrawable(R.drawable.background_bts));
+        voltar_slide_um.setBackground(getResources().getDrawable(R.drawable.background_bts));
         imgV.setImageResource(R.drawable.banner2);
     }
 
@@ -259,8 +282,8 @@ public class OfertaActivity extends AppCompatActivity {
         voltar_slide_um.setVisibility(View.GONE);
         avancar_slide_tres.setVisibility(View.VISIBLE);
         voltar_slide_dois.setVisibility(View.VISIBLE);
-        avancar_slide_tres.setBackgroundColor(getResources().getColor(R.color.black));
-        voltar_slide_dois.setBackgroundColor(getResources().getColor(R.color.black));
+        avancar_slide_tres.setBackground(getResources().getDrawable(R.drawable.background_bts));
+        voltar_slide_dois.setBackground(getResources().getDrawable(R.drawable.background_bts));
         imgV.setImageResource(R.drawable.banner3);
     }
 
@@ -270,8 +293,8 @@ public class OfertaActivity extends AppCompatActivity {
         voltar_slide_dois.setVisibility(View.GONE);
         avancar_slide.setVisibility(View.VISIBLE);
         voltar_slide.setVisibility(View.VISIBLE);
-        avancar_slide_tres.setBackgroundColor(getResources().getColor(R.color.black));
-        voltar_slide_dois.setBackgroundColor(getResources().getColor(R.color.black));
+        avancar_slide_tres.setBackground(getResources().getDrawable(R.drawable.background_bts));
+        voltar_slide_dois.setBackground(getResources().getDrawable(R.drawable.background_bts));
         imgV.setImageResource(R.drawable.banner1);
     }
 
@@ -284,6 +307,7 @@ public class OfertaActivity extends AppCompatActivity {
 
     public void play()
     {
+
         bt_play.setVisibility(View.GONE);
         bt_pause.setVisibility(View.VISIBLE);
         autoslide();
