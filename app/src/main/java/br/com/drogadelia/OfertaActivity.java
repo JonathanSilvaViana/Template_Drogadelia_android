@@ -1,5 +1,6 @@
 package br.com.drogadelia;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -8,12 +9,19 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Rect;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.ActionMode;
 import android.view.Display;
 import android.view.GestureDetector;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
@@ -24,6 +32,7 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -34,15 +43,16 @@ public class OfertaActivity extends AppCompatActivity {
 
     ImageButton carrinho_bt, voltar_slide, avancar_slide, voltar_slide_dois, voltar_slide_um, avancar_slide_dois, avancar_slide_tres, bt_pause, bt_play;
     Button bt_update_app;
-    String imgA, imgB, imgC;
+    String imgA, imgB, imgC, telefone_chat;
     int pegarID_img;
     Intent carrinhodecompras, bannerLegal;
     RecyclerView lista_ofertas;
+    String[] fakedata;
 
     final static int transicao = 2600;
     final static int transicaoII = 5200;
     final static int transicaoIII = 10400;
-    ImageView imgV, imageBanner;
+    ImageView imgV, imageBanner, listafalsa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -176,6 +186,13 @@ public class OfertaActivity extends AppCompatActivity {
 
         //criar aqui o web service
 
+        //define os dados falsos
+        fakedata = getResources().getStringArray(R.array.produtos);
+
+        List<Produto> produtos = new ArrayList<Produto>();
+
+        //lista_ofertas.setAdapter(produtos);
+
         //encontra a imagem de banner
 
         imageBanner = (ImageView) findViewById(R.id.imageBanner);
@@ -187,6 +204,8 @@ public class OfertaActivity extends AppCompatActivity {
             }
         });
 
+
+        telefone_chat = getResources().getString(R.string.numero_chat);
 
     }
 
@@ -221,6 +240,14 @@ public class OfertaActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), R.string.endslide, Toast.LENGTH_SHORT).show();
             }
         }, transicaoIII );
+
+
+        //Toolbar barra = (Toolbar)findViewById(R.id.toolbar);
+
+       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        //barra.inflateMenu(R.menu.menu);
+
 
 
 
@@ -326,4 +353,71 @@ public class OfertaActivity extends AppCompatActivity {
         //startActivity(getIntent());
     }
 
-}
+    public void chat()
+    {
+        Uri uri = Uri.parse("smsto:" + telefone_chat);
+        Intent i = new Intent(Intent.ACTION_SENDTO, uri);
+        i.setPackage("com.whatsapp");
+        startActivity(Intent.createChooser(i, ""));
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+
+    }
+
+    //evento de definição sobre menus de navegação
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item)
+    {
+
+        switch (item.getItemId())
+        {
+            case R.id.suporte:
+                chat();
+                return true;
+            case R.id.categoria:
+                Toast.makeText(this, "categoria", Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
+    }
+
+
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        switch (item.getItemId()) {
+            case R.id.suporte:
+                chat();
+                return true;
+            case R.id.categoria:
+                vai_bannerLegal();
+                return true;
+            default:
+                return super.onContextItemSelected(item);
+        }
+    }
+
+
+
+    public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.suporte:
+                chat();
+                mode.finish(); // Action picked, so close the CAB
+                return true;
+            default:
+                return false;
+        }
+    }
+
+
+    }
+

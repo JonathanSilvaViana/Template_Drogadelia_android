@@ -16,4 +16,34 @@
     <string name="nicebuttom">Botão legal</string>
     <string name="clickNiceButtom">Você clicou no botão legal!</string>
     <string name="checkemail">Cheque seu e-mail</string>
+
+    <string-array name="produtos">
+        <item>Misopethanmenos</item>
+        <item>Dipirona</item>
+        <item>Aspirina</item>
+        <item>Creme dental</item>
+        <item>Diclofenaco</item>
+        <item>Tilenol</item>
+
+        <item>R$ 500,90</item>
+        <item>R$ 10,90</item>
+        <item>R$ 5,00</item>
+        <item>R$ 18,50</item>
+        <item>R$ 0,90</item>
+        <item>R$ 0,90</item>
+
+        <item>ABC</item>
+        <item>ABC</item>
+        <item>ABC</item>
+        <item>ABC</item>
+        <item>ABC</item>
+
+        <item>Genérico</item>
+        <item>Genérico</item>
+        <item>Genérico</item>
+        <item>Genérico</item>
+        <item>Genérico</item>
+
+    </string-array>
+    <string name="numero_chat">+5511997761865</string>
 </resources>
